@@ -1,6 +1,8 @@
+const songModel = require('../models/model_song');
 
 const getHomePage = async(req, res) => {
-    res.render('homepage')
+    let dataSong = await songModel.getlistSong();
+    res.render('homepage',{dataSong:dataSong})
 }
 
 module.exports = {

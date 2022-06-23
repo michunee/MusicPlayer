@@ -26,6 +26,7 @@ const startTime =$('.startTime');
 const favouriteSongList=$('.favouriteList');
 var r = $(':root');
 var favouriteArray=[]
+var songString = document.getElementById("songString").value; 
 
 const app={
     currentSong: {},
@@ -39,46 +40,7 @@ const app={
     songTime:0,
     songVolume:0,
     config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY ))||{},
-    songs: 0,
-    getlistSong: function() {
-        this.songs = [{
-            name: 'BadHabits' ,
-            singer: 'EdSheeran',
-            path: 'assets/BadHabit.mp3',
-            image: 'assets/iBadHabit.jpg'
-
-        },
-        {
-            name: 'What are words' ,
-            singer: 'Medina',
-            path: 'assets/What are words.mp3',
-            image: 'assets/words.jpg'
-        },
-        {
-            name: 'HienNha' ,
-            singer: 'No name',
-            path: 'assets/HienNha.mp3',
-            image: 'assets/ihiennha.jpg'
-        },
-        {
-            name: 'LeaveTheDoorOpen' ,
-            singer: 'BrunoMars',
-            path: 'assets/LeaveTheDoorOpen.mp3',
-            image: 'assets/Leave.jpg'
-        },
-        {
-            name: 'ToTheMoon' ,
-            singer: 'Hooligan',
-            path: 'assets/Tothemoon.mp3',
-            image: 'assets/Moon.jpg'
-        },
-        {
-            name: 'Love You Baby' ,
-            singer: 'Sinastra',
-            path: 'assets/LoveYouBaby.mp3',
-            image: 'assets/Love.jpg'
-        }]
-    },
+    songs: songString?JSON.parse(songString):[],
 
     setConfig: function(key, value) {
         this.config[key] = value;
@@ -483,7 +445,6 @@ const app={
 
     },
     start: function(){
-        this.getlistSong();
         this.reloadHandle();
         this.volumeLoad();
         this.reloadHandle();

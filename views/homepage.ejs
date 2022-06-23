@@ -7,10 +7,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">    
     <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='stylesheet' href='/stylesheets/navbar.css'/>
     <link rel="icon" href="https://sollohubmusic.com/wp-content/uploads/2016/12/favicon.png" type="image/gif" sizes="16x16">
 
 </head>
 <body>
+    <!-- NavBar -->
+    <header class="header-navbar">
+      <h1 class="logo"><a href="/">Music Player</a></h1>
+        <ul class="main-nav">
+            <li><a href="/add">Add</a></li>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">List of music</a></li>
+        </ul>
+    </header> 
     <div class="player">
         <!-- Dashboard -->
         <div class="dashboard">
@@ -88,7 +98,7 @@
         <div class="playlist">
 
         </div>
-    
+        <input type="text" hidden value="<%= songString %>" id="songString" />
       </div>      
 </body>
 <script src='/scripts/script.js'></script>

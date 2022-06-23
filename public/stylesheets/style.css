@@ -41,7 +41,7 @@ html {
 
 .dashboard {
   padding: 16px 16px 14px;
-  background-color: rgb(218, 244, 255);
+  background-color: whitesmoke;
   position: fixed;
   
   top: 0;
@@ -471,3 +471,4 @@ animation:fadeIn 1s both;
  
 
 }
+

@@ -22,20 +22,28 @@
           </ul>
     </header>
     <div class="card">
-        <h1>
-            Upload Files<br/>
-        </h1>
-        <label>Song's Name</label>
-        <input type="text" placeholder="Song's Name" /><br>
-        <label>Singer's Name</label>
-        <input type="text"placeholder="Singer's Name" /><br>
-        <label for="file">Thumbnail</label>
-        <input type="file"multiple /><br>
-        <label for="file">Mp3</label>
-        <input type="file" multiple />
-        <p></p>
-        <br>
-        <button class="button" type="submit">Upload</button>
+        <h1>List of Music</h1>
+        <table class="table" style="background-color:#fff;">
+            <thead>
+                <tr>
+                    <th scope="col">Song's Name</th>
+                    <th scope="col">Singer</th>
+                    <th scope="col">Delete</th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+
+            <% for(data of dataSong) { %>
+                <tbody class="table-body">
+                    <tr>
+                        <td scope="col"><%= data.name %></td>
+                        <td scope="col"><%= data.singer %></td>
+                        <td><button class="list-btn" type="submit">Edit</button></td>
+                        <td><button class="list-btn" type="submit">Delete</button></td>
+                    </tr>
+                </tbody>
+            <% } %>
+        </table>
     </div>
 </body>
 </html>

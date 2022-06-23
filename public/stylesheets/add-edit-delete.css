@@ -1,0 +1,39 @@
+.card {
+    margin-left: 250px;; 
+    width: 70%;
+    padding: 30px 90px 90px 90px;
+    border: 6px solid rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+h1{
+    margin-left: 400px;
+}
+
+label{
+    margin-left: 250px;
+    font-weight: bold;
+}
+
+input{
+    margin-left: 250px;
+    width:50%
+}
+
+.list-btn{
+    width: 80px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    background-color: white;
+}
+
+.button{
+    margin-left: 250px;
+    width:10%;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    background-color: white;
+}
+
+thead{
+    font-weight: bold;
+}
+

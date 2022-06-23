@@ -10,7 +10,13 @@ const getAddPage = async(req, res) => {
     res.render('add-music');
 }
 
+const getlistPage = async(req, res) => {
+    let dataSong = await songModel.getlistSong();
+    res.render('list-music',{dataSong: dataSong});
+}
+
 module.exports = {
     getHomePage,
-    getAddPage
+    getAddPage,
+    getlistPage
 }

@@ -28,8 +28,8 @@
                 <tr>
                     <th scope="col">Song's Name</th>
                     <th scope="col">Singer</th>
-                    <th scope="col">Delete</th>
                     <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
                 </tr>
             </thead>
 
@@ -38,8 +38,17 @@
                     <tr>
                         <td scope="col"><%= data.name %></td>
                         <td scope="col"><%= data.singer %></td>
-                        <td><button class="list-btn" type="submit">Edit</button></td>
-                        <td><button class="list-btn" type="submit">Delete</button></td>
+                        <td>
+                            <form action="/edit/<%= data.id %>" method="get">
+                                <button class="list-btn" type="submit">Edit</button> 
+                            </form>  
+                        </td>
+                        <td>
+                            <form action="/delete/<%= data.id %>" method="get">
+                                <button class="list-btn" type="submit" 
+                                onclick="return confirm('Are you sure to delete this song?')">Delete</button>
+                            </form>  
+                        </td>
                     </tr>
                 </tbody>
             <% } %>
